@@ -109,6 +109,7 @@ header h1 {
 .wrapper {
     width: 80%;
     max-width: 1100px;
+    min-height: calc(100vh - 400px - 300px);
     margin: 50px auto;
     display: flex;
     flex-direction: row;
@@ -126,15 +127,21 @@ header h1 {
     gap: 0.5rem;
 }
 
-.card h2 {
+.wrapper h2 {
+    font-size: 3rem;
+}
+
+.card h2,
+.big-card h2 {
     font-size: 2rem;
 }
 
 .big-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    max-width: 480px;
+    align-items: flex-start;
+    align-self: center;
+    max-width: 450px;
     background-color: #FFFFFF;
     color: #222222;
     margin: 0 auto;
@@ -152,6 +159,10 @@ header h1 {
     padding: 1rem;
 }
 
+.big-card p {
+    margin-bottom: 3rem;
+}
+
 .wrapper button {
     background-color: #E83F57;
     color: #FFFFFF;
@@ -166,8 +177,7 @@ header h1 {
 }
 
 .wrapper .big-card button {
-    margin-top: 3rem;
-    padding: 1rem 1rem;
+    padding: 0.5rem 1rem;
 }
 
 footer {
@@ -179,7 +189,7 @@ footer {
     max-width: 80%;
     max-width: 1100px;
     height: 200px;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     margin: 0 auto;
     padding-top: 2rem;
@@ -208,4 +218,36 @@ nav a {
 .icons img {
     width: 28px;
     height: auto;
+}
+
+table {
+    align-self: center;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.3rem;
+}
+
+th {
+    background-color: #ED363633;
+    text-align: left;
+    height: 2rem;
+    font-size: 1rem;
+}
+
+td {
+    height: 3rem;
+}
+
+tfoot {
+    height: 4rem;
+    font-weight: bold;
+    border-top: #FFFFFF 2px solid;
+}
+
+.order-button {
+    height: 3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: auto;
+    margin-top: 3rem;
 }
